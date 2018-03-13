@@ -1,6 +1,6 @@
-#Alpine Vagrant Box setup for VirtualBox
+# Alpine Vagrant Box setup for VirtualBox
 
-##Box preparation
+## Box preparation
 
 Install the base image `alpine-standard-3.7.0-x86_64.iso` in VirtualBox
 
@@ -23,6 +23,6 @@ Install the vagrant-alpine plugin to avoid this kind of issue `change_host_name 
 
 Now you're ready to bootstrap some VM(s) : `$ vagrant init` `$ vagrant up`
 
-##Note
+## Note
 When packaging it's mandatory to put the base image NIC in NAT network otherwise vagrant will not being able to log into the VM with the vagrant user through a local port forwarding.
 After the VM has been spawned, the additional NIC are eventually added and configured in the desired network following the vagrant file statements `config.vm.network "public_network", bridge: "wlp2s0",...`
